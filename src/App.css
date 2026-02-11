@@ -4,7 +4,7 @@ body {
   background-color: #f4f6f8;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
 }
 
@@ -27,9 +27,17 @@ body {
   border: 1px solid #ccc;
   font-size: 16px;
 }
+.category-filter {
+  height: 27px;
+  width: 130px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-right: 20px;
+}
 .location-filter {
   height: 27px;
-  width: 80px;
+  width: 120px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 16px;
