@@ -22,7 +22,7 @@ body {
 .searchbar {
   margin-right: 20px;
   height: 25px;
-  width: 280px;
+  width: 320px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 16px;
@@ -37,7 +37,7 @@ body {
 }
 .location-filter {
   height: 27px;
-  width: 120px;
+  width: 150px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 16px;

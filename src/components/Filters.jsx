@@ -6,28 +6,30 @@ const Filters = () => {
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [locationFilter, setLocationFilter] = useState("All");
 
-  const displayedJobs = jobs.filter((job) => {
-    const matchesSearch =
-      job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      job.company.toLowerCase().includes(searchTerm.toLowerCase());
+  const displayedJobs = jobs
+    .filter((job) => {
+      const matchesSearch =
+        job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        job.company.toLowerCase().includes(searchTerm.toLowerCase());
 
-    const matchesType =
-      categoryFilter === "All" ||
-      job.type.toLowerCase() === categoryFilter.toLowerCase();
+      const matchesType =
+        categoryFilter === "All" ||
+        job.type.toLowerCase() === categoryFilter.toLowerCase();
 
-    const matchesLocation =
-      locationFilter === "All" ||
-      job.location.toLowerCase() === locationFilter.toLowerCase();
+      const matchesLocation =
+        locationFilter === "All" ||
+        job.location.toLowerCase() === locationFilter.toLowerCase();
 
-    return matchesSearch && matchesType && matchesLocation;
-  });
+      return matchesSearch && matchesType && matchesLocation;
+    })
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   return (
     <>
       <div className="filter-container">
         <input
           type="text"
-          placeholder="Search job role..."
+          placeholder="Search for Jobe Role /Company..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="searchbar"
@@ -38,7 +40,7 @@ const Filters = () => {
           onChange={(e) => setCategoryFilter(e.target.value)}
           className="category-filter"
         >
-          <option value="All">All Types</option>
+          <option value="All">Job Type</option>
           <option value="Full Time">Full Time</option>
           <option value="Contract">Contract</option>
           <option value="Internship">Internship</option>
@@ -49,7 +51,7 @@ const Filters = () => {
           onChange={(e) => setLocationFilter(e.target.value)}
           className="location-filter"
         >
-          <option value="All">All Locations</option>
+          <option value="All">Work Location</option>
           <option value="Remote">Remote</option>
           <option value="On-Site">On-Site</option>
           <option value="Hybrid">Hybrid</option>
