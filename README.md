@@ -89,19 +89,7 @@ http://localhost:5173
 
 ## Live Project Link
 
-https://find-your-job-here.vercel.app/
-
----
-
-## Screen Recording
-
-https://drive.google.com/your-video-link
-
----
-
-## Author
-
-Mallikarjuna Balagonda
+https://find-your-dream-job-with-us.vercel.app/
 
 ---
 
