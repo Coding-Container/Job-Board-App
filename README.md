@@ -89,7 +89,7 @@ http://localhost:5173
 
 ## Live Project Link
 
-my-job-board-app.vercel.app
+https://find-your-job-here.vercel.app/
 
 ---
 

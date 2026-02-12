@@ -29,7 +29,7 @@ const Filters = () => {
       <div className="filter-container">
         <input
           type="text"
-          placeholder="Search for Jobe Role /Company..."
+          placeholder="Search for Jobe Role / Company here ..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="searchbar"
